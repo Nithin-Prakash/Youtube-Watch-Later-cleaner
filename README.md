@@ -109,15 +109,22 @@ No playlist information is transmitted outside the browser.
 
 ## Disclaimer
 
-This extension is an independent tool and is not affiliated with, endorsed by, sponsored by, or associated with YouTube or Google.
+Watch Later Cleaner is an independent browser extension designed to help users manage their YouTube Watch Later playlist.
+
+This extension is not affiliated with, endorsed by, sponsored by, or associated with YouTube, Google, or any of their affiliates.
 
 YouTube is a trademark of Google LLC.
+
+The extension performs actions only when explicitly initiated by the user and operates solely within the user’s browser session.
+
+Users are responsible for reviewing their playlist before removing videos. Removed videos may not be recoverable through this extension once the action has been completed.
 
 ## Support
 
 For questions, feedback, or bug reports:
 
 **Nithin Prakash**
+
 Email: iamnithinprakash@gmail.com
 
 GitHub Repository:
