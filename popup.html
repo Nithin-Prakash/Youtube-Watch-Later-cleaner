@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Youtube Watch Later cleaner</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>Youtube Watch Later cleaner</h1>
+      <p id="status">Open YouTube Watch Later, then start the cleaner.</p>
+      <p id="selectedCount" class="selected-count">0 selected</p>
+      <div class="actions">
+        <button id="clearButton" class="primary" type="button">Clear all</button>
+        <button id="stopButton" class="secondary" type="button">Stop</button>
+      </div>
+      <div class="actions stacked">
+        <button id="selectButton" class="secondary" type="button">Select videos on page</button>
+        <button id="removeSelectedButton" class="primary" type="button">Remove selected</button>
+        <button id="clearSelectionButton" class="secondary" type="button">Clear selection</button>
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

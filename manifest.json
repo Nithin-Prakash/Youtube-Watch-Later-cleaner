@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Watch Later cleaner",
+  "description": "Clear every video from your YouTube Watch Later playlist from the loaded playlist page.",
+  "version": "1.2.1",
+  "icons": {
+    "16": "icons/wl-icon-16.png",
+    "32": "icons/wl-icon-32.png",
+    "48": "icons/wl-icon-48.png",
+    "128": "icons/wl-icon-128.png"
+  },
+  "action": {
+    "default_title": "Clear YouTube Watch Later",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/wl-icon-16.png",
+      "32": "icons/wl-icon-32.png",
+      "48": "icons/wl-icon-48.png",
+      "128": "icons/wl-icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://m.youtube.com/*"
+  ]
+}

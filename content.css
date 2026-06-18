@@ -1,0 +1,141 @@
+#watch-later-cleaner-panel {
+  position: fixed;
+  z-index: 2147483647;
+  right: 18px;
+  bottom: 18px;
+  box-sizing: border-box;
+  width: min(380px, calc(100vw - 36px));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: #181818;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 12px;
+}
+
+#watch-later-cleaner-panel[hidden] {
+  display: none;
+}
+
+.wlc-title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.wlc-status {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.wlc-selected-count {
+  margin: 0 0 10px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.wlc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wlc-button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 10px;
+}
+
+.wlc-button-primary {
+  background: #cc0000;
+  color: #fff;
+}
+
+.wlc-button-secondary {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.wlc-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.wlc-selector {
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(30, 30, 32, 0.94), rgba(18, 18, 20, 0.94));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 8px;
+  margin: 0 0 8px;
+  padding: 9px 12px;
+  position: relative;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  z-index: 10;
+}
+
+.wlc-selector:hover {
+  border-color: rgba(255, 255, 255, 0.34);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+  transform: translateY(-1px);
+}
+
+.wlc-selector input {
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 1px;
+}
+
+.wlc-check-mark {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 22px;
+  justify-content: center;
+  width: 22px;
+}
+
+.wlc-check-mark::after {
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 9px;
+  transform: rotate(45deg) scale(0.85);
+  width: 5px;
+}
+
+.wlc-selector input:checked + .wlc-check-mark {
+  background: #cc0000;
+  border-color: #ff3333;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
+}
+
+.wlc-selector input:checked + .wlc-check-mark::after {
+  border-color: #fff;
+}
+
+.wlc-item-selected {
+  outline: 2px solid #cc0000;
+  outline-offset: -2px;
+}
